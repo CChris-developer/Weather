@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchFragment2">
+
+    <fragment
+        android:id="@+id/searchFragment2"
+        android:name="com.example.myapplication.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment2_to_selectedCityFragment"
+            app:destination="@id/selectedCityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/citiesFragment2"
+        android:name="com.example.myapplication.cities.CitiesFragment"
+        android:label="fragment_cities"
+        tools:layout="@layout/fragment_cities">
+        <action
+            android:id="@+id/action_citiesFragment2_to_selectedCityFragment"
+            app:destination="@id/selectedCityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedCityFragment"
+        android:name="com.example.myapplication.selectedcity.SelectedCityFragment"
+        android:label="fragment_selected_city"
+        tools:layout="@layout/fragment_selected_city">
+        <action
+            android:id="@+id/action_selectedCityFragment_to_searchFragment2"
+            app:destination="@id/searchFragment2" />
+        <action
+            android:id="@+id/action_selectedCityFragment_to_citiesFragment2"
+            app:destination="@id/citiesFragment2" />
+    </fragment>
+</navigation>
